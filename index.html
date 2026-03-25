@@ -1,12 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IPL Auction Simulator</title>
+    <title>Serenity Support Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#0a0a0f]">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body>
+    <main class="app-shell">
+      <section class="chat-card" aria-label="Mental health support chatbot">
+        <header class="chat-header">
+          <div>
+            <h1>Serenity AI</h1>
+            <p>Your calm and caring support companion</p>
+          </div>
+          <span class="status-pill" aria-live="polite">Online</span>
+        </header>
+
+        <div id="chatContainer" class="chat-container" aria-live="polite" aria-atomic="false"></div>
+
+        <p class="disclaimer">
+          This chatbot provides emotional support but is not a substitute for professional medical advice.
+        </p>
+
+        <form id="chatForm" class="chat-input-bar" autocomplete="off">
+          <label class="sr-only" for="messageInput">Type your message</label>
+          <input
+            id="messageInput"
+            name="message"
+            type="text"
+            placeholder="Share what's on your mind..."
+            maxlength="500"
+            required
+          />
+          <button type="button" id="voiceBtn" class="icon-btn" aria-label="Use voice input" title="Voice input">
+            🎤
+          </button>
+          <button type="submit" id="sendBtn" class="send-btn">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
